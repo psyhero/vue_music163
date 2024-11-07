@@ -18,13 +18,17 @@
 
 <script setup lang='ts'>
 import { bannerStore } from '@/stores/banner';
-import { ref } from 'vue';
+import { ref, onBeforeMount } from 'vue';
 
 const isshow = ref(false)
 const show = () => isshow.value = true
 const hide = () => isshow.value = false
 
 const banner_store = bannerStore()
+
+onBeforeMount(() => {
+  banner_store.prev()
+})
 
 </script>
 

@@ -48,7 +48,6 @@ import CSidebar from './DSidebar.vue';
   .sidebar {
     width: 250px;
     box-sizing: border-box;
-    padding: 20px;
   }
 }
 </style>
